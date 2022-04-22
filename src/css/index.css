@@ -1,0 +1,28 @@
+:root {
+  --leaf: #5cdb95;
+  --darkBlue: #05386b;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background: url("../images/bg-green.svg") no-repeat;
+  background-size: 100%;
+}
+
+/* PAGE styling */
+
+.page {
+  text-align: center;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+@media screen and (max-width: 794px) {
+  body {
+    background: url("../images/bg-green-mobile.svg") no-repeat;
+    background-size: 100%;
+  }
+}
