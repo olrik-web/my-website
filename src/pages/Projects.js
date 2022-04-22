@@ -1,5 +1,6 @@
 import NavBar from "../components/navBar/NavBar";
 import { motion } from "framer-motion";
+import { ProjectItems } from "../components/projects/ProjectItems";
 import SocialBar from "../components/socials/SocialBar";
 
 const variants = {
@@ -8,7 +9,7 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 100 },
 };
 
-function Education() {
+function Projects() {
   return (
     <div>
       <NavBar />
@@ -22,21 +23,20 @@ function Education() {
           transition={{ delay: "0.4", type: "linear" }} // Set the transition to linear
           className=""
         >
-          <h2>Education</h2>
-          <p>
-            Mauris sem velit, vehicula eget sodales vitae, rhoncus eget sapien:
-          </p>
-          <ol>
-            <li>Nulla pulvinar diam</li>
-            <li>Facilisis bibendum</li>
-            <li>Vestibulum vulputate</li>
-            <li>Eget erat</li>
-            <li>Id porttitor</li>
-          </ol>
+          <h2>Projects I've worked on</h2>
+          {/* {ProjectItems.map((item, index) => {
+            return (
+              <li>
+                <div key={index}>
+                  <p>{item.title}</p>
+                </div>
+              </li>
+            );
+          })} */}
         </motion.main>
       </section>
     </div>
   );
 }
 
-export default Education;
+export default Projects;

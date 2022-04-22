@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-// import { ReactComponent as InstagramLogo } from "../../images/instagram-brands.svg";
-// import { ReactComponent as LinkedInLogo } from "../images/linkedin-brands.svg";
 // import { ReactComponent as Bars } from "../images/bars-solid.svg";
 import { MenuItems } from "./MenuItems";
 
@@ -24,7 +22,10 @@ function Header() {
       <div className="Menu-Icon" onClick={handleClick}>
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
-      <ul className={clicked ? "Nav-Menu Active" : "Nav-Menu"}>
+      <ul
+        className={clicked ? "Nav-Menu Active" : "Nav-Menu"}
+        onClick={handleClick}
+      >
         {MenuItems.map((item, index) => {
           return (
             <li>
@@ -36,53 +37,6 @@ function Header() {
         })}
       </ul>
     </nav>
-    // <nav className="navBar">
-    //   <ul>
-    //     <li className="navLi navLiBtn">
-
-    //     </li>
-    //     <div className="navToggle">
-    //       <li className="navLi">
-    //         <NavLink className="link link--metis" to="/">
-    //           Home
-    //         </NavLink>
-    //       </li>
-    //       <li className="navLi">
-    //         <NavLink className="link link--metis" to="/education">
-    //           Education
-    //         </NavLink>
-    //       </li>
-    //       <li className="navLi">
-    //         <NavLink className="link link--metis" to="/work-experience">
-    //           Work Experience
-    //         </NavLink>
-    //       </li>
-    //       <li className="navLi">
-    //         <NavLink className="link link--metis" to="/contact">
-    //           Contact
-    //         </NavLink>
-    //       </li>
-    //       <li className="navLi">
-    //         <a
-    //           href="https://www.instagram.com/marcusolrik/"
-    //           target="_blank"
-    //           rel="noreferrer"
-    //         >
-    //           <InstagramLogo className="navImage " />
-    //         </a>
-    //       </li>
-    //       <li className="navLi">
-    //         <a
-    //           href="https://www.linkedin.com/in/marcusolrik/"
-    //           target="_blank"
-    //           rel="noreferrer"
-    //         >
-    //           <LinkedInLogo className="navImage " />
-    //         </a>
-    //       </li>
-    //     </div>
-    //   </ul>
-    // </nav>
   );
 }
 

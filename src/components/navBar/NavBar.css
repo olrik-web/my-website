@@ -1,6 +1,7 @@
 :root {
   --leaf: #5cdb95;
   --darkBlue: #05386b;
+  --lightLeaf: #b6dbaf;
 }
 
 .NavBarItems {
@@ -22,7 +23,7 @@
 
 .Nav-Menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   list-style: none;
   grid-gap: 10px;
   text-align: center;
@@ -41,7 +42,7 @@
 }
 
 /* mobile screen */
-@media screen and (max-width: 794px) {
+@media screen and (max-width: 1000px) {
   .Nav-Menu {
     display: flex;
     flex-direction: column;
@@ -49,9 +50,13 @@
     height: 320px;
     position: absolute;
     background: var(--leaf);
+    z-index: 1;
     top: 60px;
     left: -110%; /*out of view*/
     transition: all 0.5s ease;
+  }
+  .NavBarItems {
+    background: var(--leaf);
   }
   /*slide menu into view*/
   .Nav-Menu.Active {
@@ -64,6 +69,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
   }
 
   .Menu-Icon {
@@ -74,6 +80,7 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    z-index: 2;
   }
 
   .fa-times {

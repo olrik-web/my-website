@@ -1,0 +1,24 @@
+:root {
+  --leaf: #5cdb95;
+  --darkBlue: #05386b;
+  --lightLeaf: #b6dbaf;
+}
+
+.socialBar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+i {
+  font-size: 24pt;
+  /* width: 0px; */
+  padding: 30px 30px;
+  color: var(--darkBlue);
+}
+
+.motionDiv {
+  display: inline-block;
+}

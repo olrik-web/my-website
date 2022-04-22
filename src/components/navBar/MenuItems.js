@@ -15,8 +15,14 @@ export const MenuItems = [
     cName: "link link--metis",
   },
   {
+    title: "Projects",
+    url: "/projects",
+    cName: "link link--metis",
+  },
+  {
     title: "Contact",
     url: "/contact",
     cName: "link link--metis",
-  },
+  }
+  
 ];
