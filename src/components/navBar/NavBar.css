@@ -4,10 +4,11 @@
   --lightLeaf: #b6dbaf;
   --lightOrange: #fa7a02;
   --darkOrange: #c51515;
+  --veryDarkGray: #151515;
 }
 
 .NavBarItems {
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,21 +71,22 @@
 }
 
 /* mobile screen */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1180px) {
   .Nav-Menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 320px;
+    height: 460px;
     position: absolute;
-    background: var(--leaf);
+    background: var(--);
     z-index: 1;
     top: 60px;
     left: -110%; /*out of view*/
     transition: all 0.5s ease;
+    background: var(--veryDarkGray);
   }
   .NavBarItems {
-    background: var(--leaf);
+    background: var(--veryDarkGray);
   }
   /*slide menu into view*/
   .Nav-Menu.Active {
