@@ -24,7 +24,7 @@ export default function Layout() {
       <NavBar />
       <AnimatePresence
         exitBeforeEnter
-        initial={false}
+        // initial={false}
         onExitComplete={() => window.scrollTo(0, 0)}
       >
         <Routes location={location} key={location.pathname}>
