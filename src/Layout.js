@@ -9,7 +9,6 @@ import Projects from "./pages/Projects";
 import { useLocation } from "react-router-dom";
 import NavBar from "./components/navBar/NavBar";
 import SocialBar from "./components/socials/SocialBar";
-import { ReactComponent as BgCliff } from "./images/cliff-sun.svg";
 import LogoAnimation from "./components/logo/LogoWithA";
 import About from "./pages/About"; 
 import React from "react";
@@ -19,8 +18,7 @@ export default function Layout() {
   const location = useLocation();
   return (
     <main>
-      <BgCliff className="bgCliff" />
-      <LogoAnimation />
+      {/* <LogoAnimation /> */}
       <NavBar />
       <AnimatePresence
         exitBeforeEnter

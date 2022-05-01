@@ -3,8 +3,6 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	<!-- .st0{fill:#151515;} -->
-	<!-- .st1{fill:#FFFFFF;} -->
 </style>
 
 	<defs>
@@ -19,7 +17,7 @@
 
 	</defs>
 
-<!-- <polygon class="st0" points="0,0 515.89,0 1160.5,520.5 692.5,930.5 1920,189.34 1920,1080 0,1080 "/> -->
+<!-- <polygon points="0,0 515.89,0 1160.5,520.5 692.5,930.5 1920,189.34 1920,1080 0,1080 "/> -->
 <polygon fill="url(#logo-gradient)" points="1160.5,520.5 1160.5,647.92 692.5,930.5 "/>
 <polygon points="515.89,0 1160.5,520.5 1160.5,647.92 1920,189.34 1920,0 "/>
 </svg>

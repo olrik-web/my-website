@@ -1,6 +1,7 @@
 .bgSun {
   width: 100px;
   fill: url(#SunGradient);
+  /* z-index: 100; */
 }
 
 .bgLetter, .bgCircle {
@@ -12,9 +13,9 @@
 
 .svgSunLetter {
   position: absolute;
-  z-index: -1;
+  /* z-index: 100; */
   left: 82%;
-  /* top: 25%; */
+  /* top: 0; */
   width: 150px;
   animation: float 6s ease-in-out infinite;
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);

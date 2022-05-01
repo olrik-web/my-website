@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
+import Skill from "../components/articles/Skill";
+import { SkillItems } from "../components/articles/ListItems";
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -29,8 +31,19 @@ export default function About() {
           chosen to pursue my natural curiosity of IT in hopes of making a
           career out of my passion. Through work experience, education and
           projects I've possessed various skills, which moulded me into the
-          competent Web and Full Stack Developer that I am today.
+          hard-working developer that I am today.
         </p>
+        <p>
+          I am confortable with Visual Studio, VS Code, Android Studio and Adobe
+          (Photoshop, Illustrator and Lightroom).
+        </p>
+        <section className="grid-container">
+          {SkillItems.map((item, index) => {
+            return <Skill item={item} key={index} />;
+          })}
+        </section>
+
+        {/* <p>TODO: INTEREST</p> */}
       </motion.main>
     </section>
   );

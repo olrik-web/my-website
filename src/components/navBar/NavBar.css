@@ -60,6 +60,7 @@
   justify-content: end;
   margin-right: 2rem;
   padding-inline-start: 0px;
+  z-index:1;
 }
 
 .fa-bars {

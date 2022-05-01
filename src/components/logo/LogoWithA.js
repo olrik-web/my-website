@@ -1,7 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import "./Logo.css";
 import React from "react";
-
 
 export default function LogoAnimation() {
   const pathVariants = {
@@ -36,17 +35,48 @@ export default function LogoAnimation() {
   };
 
   const slideIn = {
-    hidden: { opacity: 0, x: 0, y: 600 },
-    enter: { opacity: 1, x: 0, y: 200 },
-    // exit: { opacity: 0, x: 0, y: 0 },
+    hidden: {
+      opacity: 0,
+      x: 0,
+      y: 600,
+      // transition: { duration: 2, delay: 2, type: "linear" },
+    },
+    enter: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 2, delay: 1, type: "linear" },
+    },
+    exit: {
+      opacity: 0,
+      x: 300,
+      y: 0,
+      transition: { duration: 1, type: "linear" },
+    },
   };
+  const x = useMotionValue(0);
+  const scale = useTransform(x, [150, -150], [0.9, 1.1]);
+
   return (
-    <motion.main
+    <motion.div
       variants={slideIn} // Pass the variant object into Framer Motion
       initial="hidden" // Set the initial state to variants.hidden
       animate="enter" // Animated state to variants.enter
-      // exit="exit" // Exit state (used later) to variants.exit
-      transition={{ duration: 2, delay: "0.4", type: "linear" }} // Set the transition to linear
+      exit="exit" // Exit state (used later) to variants.exit
+      // whileHover="hover"
+      drag="x"
+      dragConstraints={{
+        left: 0,
+        right: 0,
+      }}
+      style={{
+        x: x,
+        scale: scale,
+        cursor: "grab",
+      }}
+      whileTap={{ cursor: "grabbing" }}
+      dragTransition={{ bounceStiffness: 60, bounceDamping: 20 }}
+      // Set the transition to linear
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -86,6 +116,6 @@ export default function LogoAnimation() {
           animate="visible"
         />
       </svg>
-    </motion.main>
+    </motion.div>
   );
 }

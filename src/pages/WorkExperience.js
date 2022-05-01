@@ -9,27 +9,34 @@ const variants = {
 
 export default function WorkExperience() {
   return (
-      <section className="page">
-        <motion.main
-          variants={variants} // Pass the variant object into Framer Motion
-          initial="hidden" // Set the initial state to variants.hidden
-          animate="enter" // Animated state to variants.enter
-          exit="exit" // Exit state (used later) to variants.exit
-          transition={{ delay: "0.4", type: "linear" }} // Set the transition to linear
-          // className=""
-        >
-          <h2>Work experience</h2>
-          <p>
-            Mauris sem velit, vehicula eget sodales vitae, rhoncus eget sapien:
-          </p>
-          <ol>
-            <li>Nulla pulvinar diam</li>
-            <li>Facilisis bibendum</li>
-            <li>Vestibulum vulputate</li>
-            <li>Eget erat</li>
-            <li>Id porttitor</li>
-          </ol>
-        </motion.main>
-      </section>
+    <section className="page">
+      <motion.main
+        variants={variants} // Pass the variant object into Framer Motion
+        initial="hidden" // Set the initial state to variants.hidden
+        animate="enter" // Animated state to variants.enter
+        exit="exit" // Exit state (used later) to variants.exit
+        transition={{ delay: "0.4", type: "linear" }} // Set the transition to linear
+      >
+        <h2>Work Experience</h2>
+        <div className="outer">
+          <div className="card">
+            <div className="info">
+              <h3 className="cardTitle">Jan. 2022 - Now | Student System Developer</h3>
+              <p className="cardDesc">
+                Student System Developer at Apport Systems A/S.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="info">
+              <h3 className="cardTitle">Aug. 2021 - Dec. 2021 | Internship</h3>
+              <p className="cardDesc">
+                Internship as a Full Stack Developer at Maxtel.dk ApS.
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.main>
+    </section>
   );
 }

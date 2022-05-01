@@ -10,6 +10,8 @@
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
@@ -32,7 +34,6 @@ body {
 
 .homePageParagraph {
   margin-top: 40px;
-  
 }
 
 .typeWriter {
@@ -56,7 +57,10 @@ body {
 
 .bgCliff {
   position: absolute;
-  z-index: -30; 
+  top: 0;
+  left: 0;
+  z-index: -30;
+  width: 100%;
   background-size: cover;
 }
 
@@ -75,24 +79,32 @@ body {
   }
 }
 
-.grid-container > article {
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+article {
+  box-shadow: 1px 1px 8px black;
   text-align: center;
   padding: 1.5em;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   transition: 0.5s;
   animation: fadeIn 0.5s;
 }
 
-.grid-container > article:hover {
-  box-shadow: 0 8px 16px 0 var(--darkGray);
+article:hover {
+  box-shadow: 0 8px 16px 0 var(--lightOrange);
+  /* position: absolute; */
+  overflow: hidden;
 }
+
+
 
 /* .grid-container > article img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 } */
+
+#skillLogo {
+    color: var(--lightOrange);
+}
 
 /*---------- TIMELINE STYLING ----------*/
 

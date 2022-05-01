@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import {ProjectItems} from "../components/projects/ProjectItems";
-import Project from "../components/projects/Project";
+import { ProjectItems } from "../components/articles/ListItems";
+import Project from "../components/articles/Project";
 import React from "react";
-
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -24,7 +23,7 @@ export default function Projects() {
         <h2>Projects I've worked on</h2>
         <section className="grid-container">
           {ProjectItems.map((item, index) => {
-            return <Project item={item} key={index} />;
+              return <Project item={item} key={index} />;
           })}
         </section>
       </motion.main>
