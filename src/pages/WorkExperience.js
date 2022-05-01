@@ -1,6 +1,5 @@
-import NavBar from "../components/navBar/NavBar";
 import { motion } from "framer-motion";
-import SocialBar from "../components/socials/SocialBar";
+import React from "react";
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -8,11 +7,8 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 100 },
 };
 
-function WorkExperience() {
+export default function WorkExperience() {
   return (
-    <div>
-      <NavBar />
-      <SocialBar />
       <section className="page">
         <motion.main
           variants={variants} // Pass the variant object into Framer Motion
@@ -35,8 +31,5 @@ function WorkExperience() {
           </ol>
         </motion.main>
       </section>
-    </div>
   );
 }
-
-export default WorkExperience;

@@ -1,17 +1,11 @@
-import NavBar from "../components/navBar/NavBar";
-import SocialBar from "../components/socials/SocialBar";
+import React from "react";
 
-function Whoops404() {
+export default function Whoops404() {
   return (
-    <div>
-      <NavBar />
-      <SocialBar />
-      <section className="page">
-        <article>
-          <p>Whoops... This page does not exist.</p>
-        </article>
-      </section>
-    </div>
+    <section className="page">
+      <article>
+        <p>Whoops... This page does not exist.</p>
+      </article>
+    </section>
   );
 }
-export default Whoops404;

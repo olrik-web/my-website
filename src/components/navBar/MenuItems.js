@@ -5,6 +5,11 @@ export const MenuItems = [
     cName: "link link--metis",
   },
   {
+    title: "About me",
+    url: "/about",
+    cName: "link link--metis",
+  },
+  {
     title: "Education",
     url: "/education",
     cName: "link link--metis",
@@ -23,6 +28,5 @@ export const MenuItems = [
     title: "Contact",
     url: "/contact",
     cName: "link link--metis",
-  }
-  
+  },
 ];

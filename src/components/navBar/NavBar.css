@@ -2,6 +2,8 @@
   --leaf: #5cdb95;
   --darkBlue: #05386b;
   --lightLeaf: #b6dbaf;
+  --lightOrange: #fa7a02;
+  --darkOrange: #c51515;
 }
 
 .NavBarItems {
@@ -13,17 +15,43 @@
   /* background-color: var(--leaf); */
 }
 
+.svgSunLetterLogo {
+  width: 40px;
+  transform: translateY(8px);
+}
+
+.logoSun {
+  fill: url(#sunGradient);
+}
+
+.logoLetter {
+  stroke: #000000;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+.logoCircle {
+  fill: none;
+  stroke: #000000;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
 .NavBar-Logo {
-  color: var(--darkBlue);
+  color: var(--lightOrange);
   text-decoration: none;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
 }
 
+.LogoTitle {
+  display: inline-block;
+  padding-right: 20px;
+}
+
 .Nav-Menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   list-style: none;
   grid-gap: 10px;
   text-align: center;
@@ -34,7 +62,7 @@
 }
 
 .fa-bars {
-  color: var(--darkBlue);
+  color: var(--lightOrange);
 }
 
 .Menu-Icon {
@@ -84,7 +112,7 @@
   }
 
   .fa-times {
-    color: var(--darkBlue);
+    color: var(--lightOrange);
     font-size: 2rem;
   }
   .link {
@@ -97,7 +125,7 @@
   font-size: 18px;
   position: relative;
   white-space: nowrap;
-  color: var(--darkBlue);
+  color: var(--lightOrange);
   display: inline-block;
   width: auto;
   height: 40px;
@@ -137,7 +165,7 @@
 }
 
 .active {
-  background-color: var(--darkBlue);
+  background-color: var(--lightOrange);
   color: white;
   border-radius: 10px;
 }

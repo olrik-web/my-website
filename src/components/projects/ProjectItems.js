@@ -4,6 +4,20 @@ export const ProjectItems = [
     description: "This is a description",
     githubUrl: "github url",
     githubPages: "github pages",
-    thumbnail: ""
+    thumbnail: "",
+  },
+  {
+    title: "Web app 2",
+    description: "This is a description",
+    githubUrl: "github url",
+    githubPages: "github pages",
+    thumbnail: "",
+  },
+  {
+    title: "Web app 3",
+    description: "This is a description",
+    githubUrl: "github url",
+    githubPages: "github pages",
+    thumbnail: "",
   },
 ];

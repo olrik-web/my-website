@@ -2,21 +2,23 @@
   --leaf: #5cdb95;
   --darkBlue: #05386b;
   --lightLeaf: #b6dbaf;
+  --lightOrange: #fa7a02;
+  --darkOrange: #c51515;
 }
 
 .socialBar {
   overflow: hidden;
   position: fixed;
   bottom: 0;
+  width: fit-content;
   left: 50%;
   transform: translateX(-50%);
 }
 
-i {
-  font-size: 24pt;
-  /* width: 0px; */
+.socialIcon {
+  font-size: 20pt;
   padding: 30px 30px;
-  color: var(--darkBlue);
+  color: var(--lightOrange);
 }
 
 .motionDiv {

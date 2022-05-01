@@ -2,6 +2,10 @@
   --leaf: #5cdb95;
   --darkBlue: #05386b;
   --lightLeaf: #b6dbaf;
+  --darkGray: #161616;
+  --veryDarkGray: #151515;
+  --lightOrange: #fa7a02;
+  --darkOrange: #c51515;
 }
 
 body {
@@ -9,29 +13,187 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
-  background: url("../images/bg-green.svg") no-repeat;
-  background-size: 100%;
+  background: var(--veryDarkGray);
+  color: white;
 }
-
-/* PAGE styling */
 
 .page {
   text-align: center;
-  width: 80%;
+  width: 60%;
   margin: 4rem auto;
+}
+
+.homePage {
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 5%;
+  width: 40%;
+}
+
+.homePageParagraph {
+  margin-top: 40px;
 }
 
 .title {
   font-size: 36pt;
 }
 
-@media screen and (max-width: 1000px) {
-  body {
-    /* background: url("../images/bg-green-mobile.svg") no-repeat; */
-    background: linear-gradient(var(--leaf) 0%, var(--lightLeaf) 100%);
-    background-attachment: fixed; /*fill screen*/
+.titleName {
+  color: var(--lightOrange);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+.bgCliff {
+  position: absolute;
+  z-index: -30; 
+  background-size: cover;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+@media screen and (min-width: 992px) {
   .page {
     margin: 2rem auto;
   }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
+
+.grid-container > article {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+.grid-container > article:hover {
+  box-shadow: 0 8px 16px 0 var(--darkGray);
+}
+
+/* .grid-container > article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+} */
+
+/*---------- TIMELINE STYLING ----------*/
+
+/* Card container */
+.card {
+  position: relative;
+  max-width: 800px;
+}
+
+/* setting padding based on even or odd */
+.card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+.card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+/* Global ::before */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid var(--lightOrange);
+}
+
+/* Setting the border of top, bottom, left */
+.card:nth-child(odd)::before {
+  left: 0px;
+  top: -5px;
+  bottom: -5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+/* Setting the border of top, bottom, right */
+.card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+/* Removing the border if it is the first card */
+.card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's odd */
+.card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Removing the border if it is the last card  and it's even */
+.card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  /* background: #333; */
+  /* color: gray; */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Title of the card */
+.cardTitle {
+  color: var(--lightOrange);
+  text-align: left;
+  position: relative;
+  font-size: 20pt;
+}
+
+.cardDesc {
+  text-align: center;
+}
+
+/* Timeline dot  */
+.cardTitle::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid var(--darkBlue);
+  top: 8px;
+}
+
+/* text right if the card is even  */
+.card:nth-child(even) > .info > .cardTitle {
+  text-align: right;
+}
+
+/* setting dot to the left if the card is odd */
+.card:nth-child(odd) > .info > .cardTitle::before {
+  left: -45px;
+}
+
+/* setting dot to the right if the card is odd */
+.card:nth-child(even) > .info > .cardTitle::before {
+  right: -45px;
+}
+
+/*---------- END OF TIMELINE STYLING ----------*/
