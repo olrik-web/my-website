@@ -1,40 +1,62 @@
-.bgSun {
-  width: 100px;
-  fill: url(#SunGradient);
-  /* z-index: 100; */
+:root {
+  --mint: #8fe3cf;
 }
 
-.bgLetter, .bgCircle {
+.bgLetter {
+  /* fill: var(--mint); */
   fill: none;
-  stroke: black;
-  stroke-width: 10;
+  stroke: var(--mint);
+  stroke-width: 35;
   stroke-miterlimit: 10;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bgCircle {
+  fill: none;
+  stroke: var(--mint);
+  stroke-width: 20;
+  stroke-miterlimit: 10;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+.svgSunLetterLogo {
+  width: 40px;
+  transform: translateY(8px);
 }
 
 .svgSunLetter {
   position: absolute;
   /* z-index: 100; */
-  left: 82%;
-  /* top: 0; */
-  width: 150px;
+  left: 75%;
+  width: 50px;
   animation: float 6s ease-in-out infinite;
-  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-  border-radius:50%;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
 }
 
-
-
-@keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+@media screen and (min-width: 600px) {
+  .svgSunLetter {
+    position: absolute;
+    /* z-index: 100; */
+    left: 82%;
+    width: 150px;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+  }
 }

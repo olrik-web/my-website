@@ -1,24 +1,31 @@
 :root {
-  --leaf: #5cdb95;
+  /* --leaf: #5cdb95;
   --darkBlue: #05386b;
   --lightLeaf: #b6dbaf;
   --lightOrange: #fa7a02;
-  --darkOrange: #c51515;
+  --darkOrange: #c51515; */
+
+  --darkBlue: #002b5b;
+  --veryDarkBlue: #001328;
+  --lightBlue: #256d85;
+  --blue: #2b4865;
+  --mint: #8fe3cf;
+  --mintDark: #72b5a5;
 }
 
 .socialBar {
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  width: fit-content;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 15;
 }
 
 .socialIcon {
   font-size: 20pt;
   padding: 30px 30px;
-  color: var(--lightOrange);
+  color: var(--mint);
 }
 
 .motionDiv {

@@ -18,7 +18,7 @@ export default function Education() {
         transition={{ delay: "0.4", type: "linear" }} // Set the transition to linear
       >
         <h2>Education</h2>
-        <div className="outer">
+        <div >
           <div className="card">
             <div className="info">
               <h3 className="cardTitle">2023 | Bachelor in Web Development</h3>

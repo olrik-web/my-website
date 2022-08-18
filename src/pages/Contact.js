@@ -7,7 +7,24 @@ const variants = {
   exit: { opacity: 0, x: 0, y: 100 },
 };
 
-export default function Contact() {
+export default function Contact(props) {
+  if (props.short) {
+    return (
+      <section className="tablist">
+        <h2 className="homeTitle">
+          <i className="fas fa-envelope titleIcon"></i>Contact
+        </h2>
+        <article className="homeAboutMeSection">
+          <div className="homeAboutMeArticle">
+            <p>
+              Send me an email at{" "}
+              <a href="mailto:molrik@outlook.com">molrik@outlook.com</a>
+            </p>
+          </div>
+        </article>
+      </section>
+    );
+  }
   return (
     <section className="page">
       <motion.main
@@ -20,10 +37,9 @@ export default function Contact() {
       >
         <h2>Contact me</h2>
         <p>
-          Send me an email at {' '}
+          Send me an email at{" "}
           <a href="mailto:molrik@outlook.com">molrik@outlook.com</a>
         </p>
-        <p>Give me a call +45 42 44 46 10</p>
       </motion.main>
     </section>
   );

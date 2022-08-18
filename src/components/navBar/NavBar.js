@@ -7,7 +7,6 @@ import { ReactComponent as Logo } from "../../images/sun-initials-logo.svg";
 
 function Header() {
   const [clicked, setClicked] = useState(false);
-
   function handleClick() {
     setClicked(!clicked);
   }
@@ -22,7 +21,7 @@ function Header() {
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
       <ul
-        className={clicked ? "Nav-Menu Active" : "Nav-Menu"}
+        className={clicked ? "Nav-Menu Nav-Menu-Active" : "Nav-Menu"}
         onClick={handleClick}
       >
         {MenuItems.map((item, index) => {

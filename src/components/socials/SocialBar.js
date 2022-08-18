@@ -14,6 +14,7 @@ function SocialBar() {
           <i className="fab fa-instagram socialIcon"></i>
         </motion.div>
       </a>
+
       <a
         href="https://www.linkedin.com/in/marcusolrik/"
         target="_blank"
@@ -33,7 +34,6 @@ function SocialBar() {
         </motion.div>
       </a>
     </div>
-    // </motion.main>
   );
 }
 

@@ -2,23 +2,8 @@ import { motion, useMotionValue, useTransform } from "framer-motion";
 import "./Logo.css";
 import React from "react";
 
-export default function LogoAnimation() {
+export default function LogoAnim() {
   const pathVariants = {
-    hidden: {
-      opacity: 0,
-      pathLength: 0,
-    },
-    visible: {
-      opacity: 1,
-      pathLength: 1,
-      transition: {
-        delay: 3,
-        duration: 2,
-        ease: "easeIn",
-      },
-    },
-  };
-  const pathVariants1 = {
     hidden: {
       opacity: 0,
       pathLength: 0,
@@ -33,19 +18,34 @@ export default function LogoAnimation() {
       },
     },
   };
+  const pathVariants1 = {
+    hidden: {
+      opacity: 0,
+      pathLength: 0,
+    },
+    visible: {
+      opacity: 1,
+      pathLength: 1,
+      transition: {
+        delay: 3,
+        duration: 2,
+        ease: "easeIn",
+      },
+    },
+  };
 
   const slideIn = {
     hidden: {
       opacity: 0,
       x: 0,
-      y: 600,
+      y: 0,
       // transition: { duration: 2, delay: 2, type: "linear" },
     },
     enter: {
       opacity: 1,
       x: 0,
       y: 0,
-      transition: { duration: 2, delay: 1, type: "linear" },
+      transition: { duration: 2, delay: 2, type: "linear" },
     },
     exit: {
       opacity: 0,
@@ -64,10 +64,12 @@ export default function LogoAnimation() {
       animate="enter" // Animated state to variants.enter
       exit="exit" // Exit state (used later) to variants.exit
       // whileHover="hover"
-      drag="x"
+      drag
       dragConstraints={{
         left: 0,
         right: 0,
+        top: 0,
+        bottom: 0
       }}
       style={{
         x: x,
@@ -87,30 +89,18 @@ export default function LogoAnimation() {
         viewBox="0 0 500 500"
         className="svgSunLetter"
       >
-        <linearGradient
-          id="SunGradient"
-          gradientUnits="userSpaceOnUse"
-          x1="250"
-          y1="495.9397"
-          x2="250"
-          y2="3.9552"
-        >
-          <stop offset="0" stopColor="#C51515" />
-          <stop offset="1" stopColor="#D56D0D" />
-        </linearGradient>
-        <circle className="bgSun" cx="250" cy="250" r="250" />
         <g id="letter">
           <motion.path
-            className="bgLetter"
-            d="M100,409V91.2h26.4L250,245.84L373.55,92.05H400V409h-26.27V148.22L259.61,285.27l-19.05,0.03L126.27,148.42	V409H95.04"
+            className="bgCircle"
+            d="M250,484C120.8,484,16,379.2,16,250S120.8,16,250,16s234,104.8,234,234S379.2,484,250,484z"
             variants={pathVariants}
             initial="hidden"
             animate="visible"
           />
         </g>
         <motion.path
-          className="bgCircle"
-          d="M250,484C120.77,484,16,379.23,16,250S120.77,16,250,16s234,104.77,234,234S379.23,484,250,484z"
+          className="bgLetter"
+          d="M144,356V140l108,108l108-108v216"
           variants={pathVariants1}
           initial="hidden"
           animate="visible"

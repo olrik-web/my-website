@@ -9,10 +9,9 @@ import Projects from "./pages/Projects";
 import { useLocation } from "react-router-dom";
 import NavBar from "./components/navBar/NavBar";
 import SocialBar from "./components/socials/SocialBar";
-import LogoAnimation from "./components/logo/LogoWithA";
-import About from "./pages/About"; 
+import About from "./pages/About";
 import React from "react";
-
+import ProjectPage from "./pages/ProjectPage";
 
 export default function Layout() {
   const location = useLocation();
@@ -29,9 +28,13 @@ export default function Layout() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/education" element={<Education />} />
-          <Route path="/work-experience" element={<WorkExperience />} />
+          <Route path="/work" element={<WorkExperience />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<Projects type="category" />} />
+          <Route path="/projects/mobile" element={<Projects type="mobile" />} />
+          <Route path="/projects/web" element={<Projects type="web" />} />
+          <Route path="/projects/other" element={<Projects type="other" />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="*" element={<Whoops404 />} />
         </Routes>
       </AnimatePresence>

@@ -1,44 +1,37 @@
 :root {
-  --leaf: #5cdb95;
+  /* --leaf: #5cdb95;
   --darkBlue: #05386b;
   --lightLeaf: #b6dbaf;
   --lightOrange: #fa7a02;
   --darkOrange: #c51515;
+  */
   --veryDarkGray: #151515;
+
+  --darkBlue: #002b5b;
+  --veryDarkBlue: #001328;
+  --lightBlue: #256d85;
+  --blue: #2b4865;
+  --mint: #8fe3cf;
+  --mintDark: #72b5a5;
+  --beige: #eae3d2;
 }
 
 .NavBarItems {
+  background-color: var(--beige);
+  position: fixed;
+  width: 100%;
+  top: 0;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  z-index: 10;
   /* background-color: var(--leaf); */
 }
 
-.svgSunLetterLogo {
-  width: 40px;
-  transform: translateY(8px);
-}
-
-.logoSun {
-  fill: url(#sunGradient);
-}
-
-.logoLetter {
-  stroke: #000000;
-  stroke-width: 10;
-  stroke-miterlimit: 10;
-}
-.logoCircle {
-  fill: none;
-  stroke: #000000;
-  stroke-width: 10;
-  stroke-miterlimit: 10;
-}
-
 .NavBar-Logo {
-  color: var(--lightOrange);
+  color: var(--mint);
   text-decoration: none;
   justify-self: start;
   margin-left: 20px;
@@ -60,11 +53,12 @@
   justify-content: end;
   margin-right: 2rem;
   padding-inline-start: 0px;
-  z-index:1;
+  z-index: 1;
 }
 
 .fa-bars {
-  color: var(--lightOrange);
+  color: var(--mint);
+  font-size: 1.5rem;
 }
 
 .Menu-Icon {
@@ -76,21 +70,21 @@
   .Nav-Menu {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
-    height: 460px;
-    position: absolute;
-    background: var(--);
+    height: 150vh;
+    position: fixed;
     z-index: 1;
-    top: 60px;
-    left: -110%; /*out of view*/
+    top: -200px;
+    left: -100%; /*out of view*/
     transition: all 0.5s ease;
-    background: var(--veryDarkGray);
+    background: var(--beige);
   }
   .NavBarItems {
-    background: var(--veryDarkGray);
+    background: var(--beige);
   }
   /*slide menu into view*/
-  .Nav-Menu.Active {
+  .Nav-Menu-Active {
     left: 0;
     transition: all 0.5s ease;
   }
@@ -108,19 +102,26 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 40%);
     font-size: 1.8rem;
     cursor: pointer;
     z-index: 2;
   }
 
   .fa-times {
-    color: var(--lightOrange);
-    font-size: 2rem;
+    color: var(--mint);
+    font-size: 1.5rem;
   }
   .link {
     margin-bottom: 15px;
     margin-top: 15px;
+  }
+  .svgSunLetterLogo {
+    width: 16pt;
+    transform: translatey(2px);
+  }
+  .LogoTitle {
+    font-size: 16pt;
   }
 }
 
@@ -128,7 +129,7 @@
   font-size: 18px;
   position: relative;
   white-space: nowrap;
-  color: var(--lightOrange);
+  color: black;
   display: inline-block;
   width: auto;
   height: 40px;
@@ -168,7 +169,9 @@
 }
 
 .active {
-  background-color: var(--lightOrange);
-  color: white;
+  border: 2px solid var(--mint);
+
+  /* background-color: var(--mint); */
+  color: var(--mint);
   border-radius: 10px;
 }

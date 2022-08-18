@@ -16,7 +16,7 @@ export const MenuItems = [
   },
   {
     title: "Work Experience",
-    url: "/work-experience",
+    url: "/work",
     cName: "link link--metis",
   },
   {
