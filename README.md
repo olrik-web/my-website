@@ -4,7 +4,7 @@ This is my personal website which was made using React. It is constantly a work 
 
 It's a single page application which serves as my personal portfolio and a fun playground for me to test out different ideas. 
 
-# Getting Started with Create React App
+# Want to try it out on your own macnhine? 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
