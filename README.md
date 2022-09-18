@@ -8,6 +8,8 @@ It's a single page application which serves as my personal portfolio and a fun p
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Try running the scripts below to see the app in action. Or just visit my website at: https://marcusolrik.dk/ 
+
 ## Available Scripts
 
 In the project directory, you can run:
